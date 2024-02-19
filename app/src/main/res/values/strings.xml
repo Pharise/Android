@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sport City</string>
+    <string name="home">Main Page</string>
+    <string name="favorites">Favorites</string>
+    <string name="profile">Profile</string>
+    <string name="description">Some description</string>
+</resources>

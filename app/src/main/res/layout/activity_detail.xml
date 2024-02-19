@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/fieldImageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@null"
+            android:contentDescription="@string/description"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="goBack"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+        <CheckBox
+            android:id="@+id/likeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_like_button_background"
+            android:button="@null"
+            android:gravity="bottom"
+            android:minHeight="48dp"
+            android:onClick="addToFavorites"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fieldImageDetail">
+
+        <TextView
+            android:id="@+id/fieldTitleDetail"
+            style="@style/TextViewPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="24dp"
+            android:text="Футбольное поле СФУ"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fieldAddressDetail"
+            style="@style/TextViewPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="24dp"
+            android:text="Свободный пр., 76Г, Красноярск" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+
+                android:text="Часы работы: " />
+
+            <TextView
+                android:id="@+id/fieldOpeningHoursDetail"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Круглосуточно" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+
+                android:text="Телефон: " />
+
+            <TextView
+                android:id="@+id/fieldPhoneDetail"
+                style="@style/TextViewPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:autoLink="phone"
+                android:text="8 (391) 244-86-25" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+
+                android:text="Тип площадки: " />
+
+            <TextView
+                android:id="@+id/fieldTypeDetail"
+                style="@style/TextViewPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Открытый" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+
+                android:text="Стоимость: " />
+
+            <TextView
+                android:id="@+id/fieldCostDetail"
+                style="@style/TextViewPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вход свободный" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.yandex.mapkit.mapview.MapView
+        android:id="@+id/mapview"
+        android:layout_width="328dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
